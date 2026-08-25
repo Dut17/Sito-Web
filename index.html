@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Personale</title>
+  <meta name="description" content="Portfolio di sviluppatore web freelance: progetti, competenze e contatti." />
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/hero.css" />
+  <link rel="stylesheet" href="/src/styles/about.css" />
+  <link rel="stylesheet" href="/src/styles/projects.css" />
+  <link rel="stylesheet" href="/src/styles/skills.css" />
+  <link rel="stylesheet" href="/src/styles/contact.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__container">
+      <h1 class="hero__title">Il Tuo Nome</h1>
+      <p class="hero__tagline">Sviluppatore Web Freelance — dal frontend al deploy</p>
+      <a class="hero__cta" href="#progetti">Guarda i progetti</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about__container">
+        <h2 class="about__title" id="about-title">Chi sono</h2>
+        <p class="about__text">
+          Sono uno studente di Informatica all'Università di Camerino, appassionato di sviluppo web.
+          <!-- Testo completo da definire insieme -->
+        </p>
+      </div>
+    </section>
+
+    <section class="projects" id="progetti" aria-labelledby="projects-title">
+      <div class="projects__container">
+        <h2 class="projects__title" id="projects-title">Progetti</h2>
+        <ul class="projects__list">
+          <li class="projects__card">
+            <img class="projects__image" src="/placeholder-jarul.jpg" alt="Screenshot del sito Jarul Domnesc" />
+            <h3 class="projects__card-title">Jarul Domnesc</h3>
+            <p class="projects__card-description">
+              Sito web multilingua per un ristorante, con integrazione Google Sheets e deploy con DNS/HTTPS configurati.
+            </p>
+            <ul class="projects__stack">
+              <li class="projects__stack-item">HTML</li>
+              <li class="projects__stack-item">CSS</li>
+              <li class="projects__stack-item">JavaScript</li>
+              <li class="projects__stack-item">Google Sheets API</li>
+              <li class="projects__stack-item">Netlify</li>
+            </ul>
+            <a class="projects__link" href="#" target="_blank" rel="noopener">Vedi il sito</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="skills" id="skills" aria-labelledby="skills-title">
+      <div class="skills__container">
+        <h2 class="skills__title" id="skills-title">Competenze</h2>
+        <div class="skills__group">
+          <h3 class="skills__group-title">Frontend</h3>
+          <ul class="skills__list">
+            <li class="skills__item">HTML</li>
+            <li class="skills__item">CSS</li>
+            <li class="skills__item">JavaScript</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title">Deploy &amp; Infra</h3>
+          <ul class="skills__list">
+            <li class="skills__item">GitHub</li>
+            <li class="skills__item">Netlify</li>
+            <li class="skills__item">Hetzner</li>
+            <li class="skills__item">Docker</li>
+            <li class="skills__item">WSL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contatti" aria-labelledby="contact-title">
+      <div class="contact__container">
+        <h2 class="contact__title" id="contact-title">Contatti</h2>
+        <form class="contact__form" action="https://formspree.io/f/PLACEHOLDER_FORM_ID" method="POST">
+          <label class="contact__label" for="name">Nome</label>
+          <input class="contact__input" type="text" id="name" name="name" required />
+
+          <label class="contact__label" for="email">Email</label>
+          <input class="contact__input" type="email" id="email" name="email" required />
+
+          <label class="contact__label" for="message">Messaggio</label>
+          <textarea class="contact__textarea" id="message" name="message" required></textarea>
+
+          <button class="contact__submit" type="submit">Invia</button>
+        </form>
+
+        <ul class="contact__socials">
+          <li class="contact__social-item">
+            <a class="contact__social-link" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          </li>
+          <li class="contact__social-item">
+            <a class="contact__social-link" href="#" target="_blank" rel="noopener">GitHub</a>
+          </li>
+          <li class="contact__social-item">
+            <a class="contact__social-link" href="#" target="_blank" rel="noopener">Telegram</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Frase di credito da definire: posizione da confermare -->
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

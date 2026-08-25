@@ -1,0 +1,14 @@
+.about__container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.about__text {
+  font-size: 1rem;
+  color: var(--color-text);
+}

@@ -1,0 +1,32 @@
+.skills__container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.skills__title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills__group {
+  margin-bottom: 1.5rem;
+}
+
+.skills__group-title {
+  font-size: 1.125rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills__item {
+  font-size: 0.875rem;
+  padding: 0.35rem 0.75rem;
+  background-color: var(--color-surface);
+  border-radius: 3px;
+}

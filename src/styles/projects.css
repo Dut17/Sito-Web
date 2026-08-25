@@ -1,0 +1,55 @@
+.projects__container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.projects__title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.projects__card {
+  background-color: var(--color-surface);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.projects__image {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.projects__card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.projects__card-description {
+  font-size: 0.9375rem;
+  margin-bottom: 0.75rem;
+}
+
+.projects__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.projects__stack-item {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 3px;
+}
+
+.projects__link {
+  font-weight: 600;
+}

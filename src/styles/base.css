@@ -1,0 +1,40 @@
+:root {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-text: #f1f5f9;
+  --color-accent: #38bdf8;
+  --font-base: 'Segoe UI', system-ui, sans-serif;
+  --spacing-unit: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+section {
+  padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
