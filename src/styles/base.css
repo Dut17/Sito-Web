@@ -2,7 +2,8 @@
   --color-bg: #0f172a;
   --color-surface: #1e293b;
   --color-text: #f1f5f9;
-  --color-accent: #38bdf8;
+  --color-accent: #22d3ee;
+  --color-accent-hover: #67e8f9;
   --font-base: 'Segoe UI', system-ui, sans-serif;
   --spacing-unit: 1rem;
 }
@@ -33,6 +34,11 @@ section {
 a {
   color: var(--color-accent);
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
 }
 
 ul {

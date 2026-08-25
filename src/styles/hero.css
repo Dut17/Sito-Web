@@ -26,10 +26,12 @@
   padding: 0.75rem 1.5rem;
   border: 1px solid var(--color-accent);
   border-radius: 4px;
-  transition: background-color 0.2s ease;
+  color: var(--color-accent);
+  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero__cta:hover {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 0 8px var(--color-accent-hover);
 }

@@ -32,7 +32,7 @@
 .contact__input:focus,
 .contact__textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
+  border-color: var(--color-accent-hover);
 }
 
 .contact__submit {
@@ -42,6 +42,11 @@
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact__submit:hover {
+  background-color: var(--color-accent-hover);
 }
 
 .contact__socials {
