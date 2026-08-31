@@ -18,10 +18,34 @@
   background-color: var(--color-surface);
   border-radius: 6px;
   padding: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.projects__card:nth-child(1) { animation-delay: 0.1s; }
+.projects__card:nth-child(2) { animation-delay: 0.2s; }
+.projects__card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .projects__image {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 4px;
   margin-bottom: 0.75rem;
 }
@@ -48,8 +72,30 @@
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--color-accent);
   border-radius: 3px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.projects__stack-item:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
 }
 
 .projects__link {
   font-weight: 600;
+  position: relative;
+}
+
+.projects__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent-hover);
+  transition: width 0.3s ease;
+}
+
+.projects__link:hover::after {
+  width: 100%;
 }
