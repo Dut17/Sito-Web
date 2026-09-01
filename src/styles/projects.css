@@ -7,13 +7,9 @@
 
 .projects__grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
   justify-content: center;
-}
-
-@media (min-width: 900px) {
-  .projects__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-7); }
+  gap: var(--space-6);
 }
 
 .project-card {
