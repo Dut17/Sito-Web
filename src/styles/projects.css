@@ -3,10 +3,13 @@
   background: linear-gradient(180deg, transparent 0%, rgba(56, 189, 248, 0.02) 100%);
 }
 
+.projects .container { max-width: 980px; }
+
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
+  justify-content: center;
 }
 
 @media (min-width: 900px) {
@@ -38,6 +41,7 @@
 
 .project-card__browser-bar {
   display: flex;
+  justify-content: center;
   gap: 6px;
   padding: 12px 16px;
   background: rgba(255, 255, 255, 0.03);
@@ -59,6 +63,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
 }
 
 .project-card__screenshot { aspect-ratio: 16 / 10; overflow: hidden; background: var(--color-bg); }
@@ -80,9 +85,16 @@
   opacity: 0.4;
 }
 
-.project-card__content { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); }
+.project-card__content {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
 
-.project-card__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.project-card__meta { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2); }
 
 .project-card__tag {
   font-size: var(--fs-300);
@@ -107,12 +119,14 @@
   border-radius: var(--radius-md);
   font-size: var(--fs-300);
   line-height: 1.6;
+  text-align: left;
+  width: 100%;
 }
 
 .project-card__case-item { color: var(--color-text-muted); }
 .project-card__case-item strong { color: var(--color-text); }
 
-.project-card__tech { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.project-card__tech { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2); }
 
 .project-card__tech-item {
   font-size: var(--fs-300);
@@ -131,4 +145,4 @@
   transform: scale(1.06);
 }
 
-.project-card__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
+.project-card__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-2); }
