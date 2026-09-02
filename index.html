@@ -32,23 +32,35 @@
     </section>
 
     <section class="projects" id="progetti" aria-labelledby="projects-title">
-      <div class="projects__container">
+      <div class="container">
         <h2 class="projects__title" id="projects-title">Progetti</h2>
-        <ul class="projects__list">
-          <li class="projects__card">
-            <img class="projects__image" src="/images/Foto-pagina-JarulDomnesc.png" alt="Screenshot del sito Jarul Domnesc" />
-            <h3 class="projects__card-title">Jarul Domnesc</h3>
-            <p class="projects__card-description">
-              Sito web multilingua per un ristorante, con integrazione Google Sheets e deploy con DNS/HTTPS configurati.
-            </p>
-            <ul class="projects__stack">
-              <li class="projects__stack-item">HTML</li>
-              <li class="projects__stack-item">CSS</li>
-              <li class="projects__stack-item">JavaScript</li>
-              <li class="projects__stack-item">Google Sheets API</li>
-              <li class="projects__stack-item">Netlify</li>
-            </ul>
-            <a class="projects__link" href="https://www.jaruldomnescofficial.it" target="_blank" rel="noopener">Vedi il sito</a>
+        <ul class="projects__grid" role="list">
+          <li class="project-card">
+            <div class="project-card__visual">
+              <div class="project-card__screenshot">
+                <img src="/images/Foto-pagina-JarulDomnesc.png" alt="Screenshot del sito Jarul Domnesc" />
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Sito web</span>
+              </div>
+              <h3 class="project-card__title">Jarul Domnesc</h3>
+              <p class="project-card__description">
+                Sito web multilingua per un ristorante, con integrazione Google Sheets e deploy con DNS/HTTPS configurati.
+              </p>
+              <hr class="project-card__divider" />
+              <ul class="project-card__tech" role="list">
+                <li class="project-card__tech-item">HTML</li>
+                <li class="project-card__tech-item">CSS</li>
+                <li class="project-card__tech-item">JavaScript</li>
+                <li class="project-card__tech-item">Google Sheets API</li>
+                <li class="project-card__tech-item">Netlify</li>
+              </ul>
+              <div class="project-card__actions">
+                <a class="btn btn--primary" href="https://www.jaruldomnescofficial.it" target="_blank" rel="noopener">Vedi il sito</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
