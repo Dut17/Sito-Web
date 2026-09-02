@@ -27,6 +27,14 @@
   background: var(--color-bg-card);
   box-shadow: 14px 14px 0 rgba(var(--color-shadow-rgb), 0.18);
   padding: var(--space-6);
+  transition: transform var(--transition-slow), border-color var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.contact__form:hover,
+.contact__info:hover {
+  border-color: var(--color-accent);
+  box-shadow: 18px 18px 0 rgba(var(--color-shadow-rgb), 0.28), var(--shadow-glow);
+  transform: scale(1.01) translateY(-4px);
 }
 
 .contact__form {
@@ -222,5 +230,11 @@
   .contact__form,
   .contact__info {
     box-shadow: 8px 8px 0 rgba(var(--color-shadow-rgb), 0.16);
+  }
+
+  .contact__form:hover,
+  .contact__info:hover {
+    box-shadow: 10px 10px 0 rgba(var(--color-shadow-rgb), 0.24), var(--shadow-glow);
+    transform: scale(1.005) translateY(-2px);
   }
 }
