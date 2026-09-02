@@ -6,3 +6,4 @@ import './modules/contact-form.js';
 import './modules/copy-email.js';
 import './modules/smooth-scroll.js';
 import './modules/back-to-top.js';
+import './modules/theme-toggle.js';
