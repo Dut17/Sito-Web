@@ -13,6 +13,23 @@
   <link rel="stylesheet" href="/src/styles/contact.css" />
 </head>
 <body>
+  <nav class="nav">
+    <div class="nav__container">
+      <a class="nav__brand" href="#hero">Vladut</a>
+      <button class="nav__toggle" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__list" id="nav-list" role="list">
+        <li class="nav__item"><a class="nav__link" data-nav="hero" href="#hero">Home</a></li>
+        <li class="nav__item"><a class="nav__link" data-nav="progetti" href="#progetti">Progetti</a></li>
+        <li class="nav__item"><a class="nav__link" data-nav="skills" href="#skills">Competenze</a></li>
+        <li class="nav__item"><a class="nav__link" data-nav="contatti" href="#contatti">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="hero" id="hero">
     <div class="hero__bg-grid" aria-hidden="true"></div>
     <div class="container hero__container">
@@ -21,6 +38,9 @@
         <h1 class="hero__title">Ciao, sono <span class="hero__highlight">Vladut</span></h1>
         <p class="hero__description">
           Creo siti web veloci e professionali per attività locali. Dal design al deploy, seguo il progetto fino alla pubblicazione.
+        </p>
+        <p class="hero__description">
+          Tra gli studi di Informatica a Camerino e lo sviluppo web: creo esperienze digitali semplici, curate nei dettagli e pensate per portare risultati concreti.
         </p>
         <span class="hero__status">
           <span class="hero__status-dot" aria-hidden="true"></span>
@@ -51,7 +71,7 @@
         </div>
       </div>
     </div>
-    <a class="hero__scroll" href="#about" aria-label="Scorri verso la sezione Chi sono">
+    <a class="hero__scroll" href="#progetti" aria-label="Scorri verso la sezione Progetti">
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
         <path fill="currentColor" d="M12 16.5l-6-6 1.4-1.4L12 13.7l4.6-4.6L18 10.5z" />
       </svg>
@@ -59,15 +79,6 @@
   </header>
 
   <main>
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div class="about__container">
-        <h2 class="about__title" id="about-title">Chi sono</h2>
-        <p class="about__text">
-          Tra gli studi di Informatica a Camerino e lo sviluppo web: creo esperienze digitali semplici, curate nei dettagli e pensate per portare risultati concreti.
-        </p>
-      </div>
-    </section>
-
     <section class="projects" id="progetti" aria-labelledby="projects-title">
       <div class="container">
         <h2 class="section-title" id="projects-title">Progetti</h2>
@@ -157,7 +168,7 @@
       <div class="container contact__container">
         <h2 class="section-title" id="contact-title">Contatti</h2>
         <div class="contact__grid">
-          <form class="contact__form" action="https://formspree.io/f/mgaeavoe" method="POST">
+          <form class="contact__form" id="contact-form" action="https://formspree.io/f/mgaeavoe" method="POST">
             <div class="form-group">
               <label class="form-label" for="name">Nome <span class="required">*</span></label>
               <input class="form-input" type="text" id="name" name="name" required />
@@ -173,7 +184,10 @@
               <textarea class="form-textarea" id="message" name="message" required></textarea>
             </div>
 
-            <button class="contact__submit btn btn--primary form-submit" type="submit">Invia</button>
+            <button class="contact__submit btn btn--primary form-submit" type="submit">
+              <span class="btn-text">Invia</span>
+              <span class="btn-loader" aria-hidden="true"></span>
+            </button>
             <p class="form-status" aria-live="polite"></p>
           </form>
 
@@ -203,6 +217,12 @@
       </div>
     </section>
   </main>
+
+  <a class="back-to-top" id="back-to-top" href="#hero" aria-label="Torna su">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12 7.5l6 6-1.4 1.4L12 10.3l-4.6 4.6L6 13.5z" />
+    </svg>
+  </a>
 
   <footer class="footer">
     <!-- Frase di credito da definire: posizione da confermare -->
