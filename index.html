@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Personale</title>
   <meta name="description" content="Portfolio di sviluppatore web freelance: progetti, competenze e contatti." />
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <link rel="stylesheet" href="/src/styles/base.css" />
   <link rel="stylesheet" href="/src/styles/hero.css" />
   <link rel="stylesheet" href="/src/styles/about.css" />
@@ -16,17 +24,27 @@
   <nav class="nav">
     <div class="nav__container">
       <a class="nav__brand" href="#hero">Vladut</a>
-      <button class="nav__toggle" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="nav-list">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-      <ul class="nav__list" id="nav-list" role="list">
-        <li class="nav__item"><a class="nav__link" data-nav="hero" href="#hero">Home</a></li>
-        <li class="nav__item"><a class="nav__link" data-nav="progetti" href="#progetti">Progetti</a></li>
-        <li class="nav__item"><a class="nav__link" data-nav="skills" href="#skills">Competenze</a></li>
-        <li class="nav__item"><a class="nav__link" data-nav="contatti" href="#contatti">Contatti</a></li>
-      </ul>
+      <div class="nav__right">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Passa al tema scuro">
+          <svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-6.66 1.41-1.41M4.93 19.07l1.41-1.41M18.36 18.36l1.41 1.41M4.93 4.93 6.34 6.34M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" />
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button class="nav__toggle" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="nav-list">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        <ul class="nav__list" id="nav-list" role="list">
+          <li class="nav__item"><a class="nav__link" data-nav="hero" href="#hero">Home</a></li>
+          <li class="nav__item"><a class="nav__link" data-nav="progetti" href="#progetti">Progetti</a></li>
+          <li class="nav__item"><a class="nav__link" data-nav="skills" href="#skills">Competenze</a></li>
+          <li class="nav__item"><a class="nav__link" data-nav="contatti" href="#contatti">Contatti</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
