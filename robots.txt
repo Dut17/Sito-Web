@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dut17.github.io/Sito-Web/sitemap.xml
