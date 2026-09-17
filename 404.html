@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina non trovata · Portfolio Personale</title>
+  <meta name="description" content="La pagina richiesta non esiste. Torna alla home del portfolio." />
+  <link rel="icon" href="/Sito-Web/favicon.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/error.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__container">
+      <a class="nav__brand" href="/Sito-Web/">Vladut</a>
+      <div class="nav__right">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Passa al tema scuro">
+          <svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-6.66 1.41-1.41M4.93 19.07l1.41-1.41M18.36 18.36l1.41 1.41M4.93 4.93 6.34 6.34M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" />
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <ul class="nav__list" id="nav-list" role="list">
+          <li class="nav__item"><a class="nav__link" href="/Sito-Web/#hero">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="/Sito-Web/#progetti">Progetti</a></li>
+          <li class="nav__item"><a class="nav__link" href="/Sito-Web/#skills">Competenze</a></li>
+          <li class="nav__item"><a class="nav__link" href="/Sito-Web/#contatti">Contatti</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="error" aria-labelledby="error-title">
+    <div class="container error__container">
+      <p class="error__code" aria-hidden="true">404</p>
+      <h1 class="error__title" id="error-title">Pagina non trovata</h1>
+      <p class="error__text">
+        Il link che hai seguito non porta a nessuna pagina esistente di questo portfolio. Magari è stato spostato o l'URL contiene un errore.
+      </p>
+      <div class="error__actions">
+        <a class="btn btn--primary" href="/Sito-Web/">Torna alla home</a>
+        <a class="btn btn--outline" href="/Sito-Web/#contatti">Contattami</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <!-- Frase di credito da definire: posizione da confermare -->
+  </footer>
+
+  <script>
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        toggle.setAttribute('aria-pressed', String(next === 'dark'));
+      });
+    }
+  </script>
+</body>
+</html>
